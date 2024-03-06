@@ -1,0 +1,8 @@
+.routerContainer{
+    background-color: pink;
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

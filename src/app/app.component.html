@@ -1,4 +1,3 @@
-
 <div routerLink='/parent'>Parent</div>
 <hr>
 <div routerLink='/child'>child</div>
@@ -9,6 +8,10 @@
 -->
 <div [routerLink]="['/parent', paramNameOnRouting]">Parent + routing params</div>
 <hr>
+<div routerLink="hsbfgjhbf">Wrong route</div>
+<hr>
 <div routerLink="">Inicio</div>
-
-<router-outlet></router-outlet>
+<hr>
+<div class="routerContainer">
+    <router-outlet></router-outlet>
+</div>
