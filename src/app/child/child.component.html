@@ -1,3 +1,11 @@
-<div>
+<!-- 
+    The (click) generates an event that sends a @Output variable. It's expected to be collected
+    by the parent component. enviarDatos() is declared in child.component.ts
+
+    nameOfAttributeWeWantFromParent is an @Input variable set in child.component.ts and its value
+    can be modified when we use <app-child> like this;
+        <app-child [nameOfAttributeWeWantFromParent=9]>
+-->
+<div (click)="enviarDatos()">
     <p>{{nameOfAttributeWeWantFromParent}}</p>
 </div>

@@ -3,8 +3,15 @@
     in parent.component.ts. Then we set nameOfTheAttributeWeWantFromParent wich is a variable of
     child.component.ts with val, a value of the nummbers array. Also we are going to use a click action
     wich increase the value of the child based in the index we have clicked.
+
+    (datosEnviados)="recibirDatos($event) recollects the data from the child using the event that is
+    generated when the (click) action of the child is activated. recibirDatos() is a function declared
+    in parent.componenent.ts and it sets a variable called datosDelHijo with the value collected."
 -->
-<app-child *ngFor="let val of numbers; let i = index" [nameOfAttributeWeWantFromParent]="val" (click)="inc(i)">
+<app-child *ngFor="let val of numbers; let i = index"
+ [nameOfAttributeWeWantFromParent]=val
+ (click)="inc(i)"
+ (datosEnviados)="recibirDatos($event)">
 </app-child>
 
 <!-- 
@@ -12,3 +19,6 @@
     we stored it. 
 -->
 <p>{{paramWeWantFromRouting}}</p>
+
+<!-- This shows datosDelHijo. It gets value from (datosEnviados)="recibidDatos($event)"-->
+<p>{{datosDelHijo}}</p>

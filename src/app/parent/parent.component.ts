@@ -8,8 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ParentComponent {
   paramWeWantFromRouting: string = "";
-  
+  datosDelHijo: string = ""
 constructor(private route: ActivatedRoute){
+
   // This is how we collect the param in the routing, "paramNameOnRouting" is the name we 
   // set in app-routing.module.ts after the ':'
   route.params.subscribe(
@@ -22,5 +23,9 @@ constructor(private route: ActivatedRoute){
   numbers: number[] = [1, 2, 3, 98, 100, 15];
   inc(index: number){
     this.numbers[index]++;
+  }
+
+  recibirDatos(datosRecibidos: string){
+    this.datosDelHijo = datosRecibidos
   }
 }
