@@ -1,0 +1,14 @@
+<!--
+    This creates multiple child components, the number of them is defined by the numbers array created
+    in parent.component.ts. Then we set nameOfTheAttributeWeWantFromParent wich is a variable of
+    child.component.ts with val, a value of the nummbers array. Also we are going to use a click action
+    wich increase the value of the child based in the index we have clicked.
+-->
+<app-child *ngFor="let val of numbers; let i = index" [nameOfAttributeWeWantFromParent]="val" (click)="inc(i)">
+</app-child>
+
+<!-- 
+    To show the parameter collected from the routing we have to get the value of the variable in wich 
+    we stored it. 
+-->
+<p>{{paramWeWantFromRouting}}</p>
